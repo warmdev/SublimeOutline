@@ -1,0 +1,5 @@
+Thank you for installing the Outline package.
+
+To start, bring up the Command Palette with `Ctrl + Shift + P`, and select `Browse Mode: Outline (Left)` or another preferred layout.
+
+Please visit https://github.com/warmdev/SublimeOutline for more details. 
