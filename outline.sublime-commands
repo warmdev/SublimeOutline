@@ -1,0 +1,63 @@
+[
+  {
+    "caption": "Browse Mode: Outline (Right)",
+    "command": "outline",
+    "args": {
+      "immediate": true,
+      "other_group": "right",
+      "single_pane": true,
+      "project": true,
+      "layout": 0
+    }
+  },
+  {
+    "caption": "Browse Mode: Outline (Left)",
+    "command": "outline",
+    "args": {
+      "immediate": true,
+      "other_group": "right",
+      "single_pane": true,
+      "project": true,
+      "layout": 1
+    }
+  },
+  {
+    "caption": "Browse Mode: FileBrowser Left, Outline Right",
+    "command": "outline",
+    "args": {
+      "immediate": true,
+      "other_group": "right",
+      "single_pane": true,
+      "project": true,
+      "layout": 2
+    }
+  },
+  {
+    "caption": "Browse Mode: FileBrowser Top Left, Outline Bottom Left",
+    "command": "outline",
+    "args": {
+      "immediate": true,
+      "other_group": "right",
+      "single_pane": true,
+      "project": true,
+      "layout": 3
+    }
+  },
+  {
+    "caption": "Browse Mode: FileBrowser Top Right, Outline Bottom Right",
+    "command": "outline",
+    "args": {
+      "immediate": true,
+      "other_group": "right",
+      "single_pane": true,
+      "project": true,
+      "layout": 4
+    }
+  },
+  {
+    "caption": "Browse Mode: Close sidebar(s)",
+    "command": "outline_close_sidebar",
+    "args": {
+    }
+  }
+]

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Browse</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#d9dee5</string>
+				<key>foreground</key>
+				<string>#222222</string>
+				<key>caret</key>
+				<string>#367cc055</string>
+				<key>lineHighlight</key>
+				<string>#367cc055</string>
+				<key>gutter</key>
+				<string>#d9dee5</string>
+				<key>invisibles</key>
+				<string>#88222233</string>
+				<key>selection</key>
+				<string>#22222233</string>
+				<key>selectionBorder</key>
+				<string>#22222233</string>
+				<key>inactiveSelection</key>
+				<string>#22222219</string>
+
+				<key>shadow</key>
+				<string>#d9dee5</string>
+				<key>shadowWidth</key>
+				<string>16</string>
+
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Project Symbols > Star</string>
+			<key>scope</key>
+			<string>punctuation.definition.projects.star.symbol.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7c8692</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Project Symbols > Chevron</string>
+			<key>scope</key>
+			<string>punctuation.definition.projects.chevron.symbol.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7c869266</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Project Path</string>
+			<key>scope</key>
+			<string>string.name.project_path.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#707e8b</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>File/Dir Symbols</string>
+			<key>scope</key>
+			<string>punctuation.definition.directory.symbol.outline, punctuation.definition.file.symbol.outline, outline.item.parent_dir</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7c8692</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Dir Slash</string>
+			<key>scope</key>
+			<string>punctuation.definition.directory.slash.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#919aa388</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>File Extension</string>
+			<key>scope</key>
+			<string>string.name.file.extension.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#919aa3</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Dir Name</string>
+			<key>scope</key>
+			<string>string.name.directory.outline, string.name.project.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Header</string>
+			<key>scope</key>
+			<string>header.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#707e8b</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Header punctuations</string>
+			<key>scope</key>
+			<string>header.outline punctuation.definition.separator.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6f798733</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Header Rename Mode Title</string>
+			<key>scope</key>
+			<string>punctuation.definition.rename_mode</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E99023</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Marked</string>
+			<key>scope</key>
+			<string>outline.marked</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+				<key>background</key>
+				<string>#4b96d6</string>
+			</dict>
+		</dict>
+
+		<!-- HELP ----------------------------- -->
+		<dict>
+			<key>name</key>
+			<string>Help: Table Name</string>
+			<key>scope</key>
+			<string>outline.help.header</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#707E8B</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Table Header</string>
+			<key>scope</key>
+			<string>outline.table.th</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#4B96D6</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Table Header > Title</string>
+			<key>scope</key>
+			<string>outline.table.th title</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Table Header</string>
+			<key>scope</key>
+			<string>outline.table.tr</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FFFFFF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Table punctuations</string>
+			<key>scope</key>
+			<string>outline.table.punctuations</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d9dee5</string>
+				<key>background</key>
+				<string>#d9dee5</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Shortcut</string>
+			<key>scope</key>
+			<string>outline.table.tr command_shortcut</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#D6774B</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Help: Command Description</string>
+			<key>scope</key>
+			<string>outline.table.tr command_desc</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+		<!-- /HELP ---------------------------- -->
+
+		<dict>
+			<key>name</key>
+			<string>Error</string>
+			<key>scope</key>
+			<string>string.error.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aa0000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>VCS Modified</string>
+			<key>scope</key>
+			<string>item.modified.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#d9dee0</string>
+				<key>foreground</key>
+				<string>#F09609</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>VCS Untracked</string>
+			<key>scope</key>
+			<string>item.untracked.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#d9dee0</string>
+				<key>foreground</key>
+				<string>#00c406</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>VCS Colorblind</string>
+			<key>scope</key>
+			<string>item.colorblind.outline</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+	</array>
+	<key>uuid</key>
+	<string>07379361-ce49-4e6c-a03f-26378a7a2131</string>
+</dict>
+</plist>

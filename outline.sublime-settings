@@ -1,0 +1,88 @@
+{
+  // If you don't like `..` symbol on the top of each view that moves you to
+  // the parent directory and want to hide it you can set this to false
+  "outline_show_parent": true,
+
+  // If you want to see header (underlined full path) on top of file list
+  "outline_header": false,
+
+  // If you want to see full path in tab title and thus in window title
+  // if tab is focused
+  "outline_show_full_path": false,
+
+  // If true 'Send to Trash' command will confirm the action with a dialog box
+  "outline_confirm_send2trash": true,
+
+  // Showing hidden files by default
+  "outline_show_hidden_files": true,
+
+  // Customize the patterns used to determine if a file should be hidden
+  // e.g. [".*", "__pycache__", "*.pyc"]
+  "outline_hidden_files_patterns": [".*"],
+
+  // (ST3 Only) shows a FileBrowser or a jump list view in new window by default
+  // false: hijacking is disabled
+  // "jump_list": shows the project jump list
+  // "outline"    : shows a normal FileBrower view defaults to user directory
+  "outline_hijack_new_window": false,
+
+  // Path to git executable.
+  // Wildcards are supported, e.g. if you use GitHub for Windows it would be:
+  //     "git_path": "~/Appdata/Local/GitHub/PortableGit_*/cmd/git.exe"
+  // To disable git integration set to empty string:
+  //     "git_path": ""
+  "git_path": "git",
+
+  // Path to hg executable.
+  // Wildcards are supported, e.g. if you use TortoiseHg it would be:
+  //     "hg_path": "%ProgramFiles%/TortoiseHg/hg.exe"
+  // To disable hg integration set to empty string:
+  //     "hg_path": ""
+  "hg_path": "hg",
+
+  // true: the default, pressing Enter on a directory uses the current view.
+  // false: a new view is created.
+  "outline_reuse_view": true,
+
+  // How should be positioned the Browse Mode view opened when jumping
+  // "left": the default, open the view on the left
+  // "right": open the view on the right
+  // true: take all space available
+  // false: don’t open any view
+  "outline_open_on_jump": "left",
+
+  // true: keep the active window if empty when jumping
+  // false: the default, always open a new window when jumping
+  "outline_smart_jump": false,
+
+  // Width for FileBrowser column (as sidebar) accepts float or int:
+  // float  0.1-0.9   put 1 is a window width, so e.g. 0.5 is half of window
+  // int    e.g. 99   pixels, if value will be more than current window width
+  //                  then value will be treated as 0.9
+  "outline_width": 0.3,
+
+  // Automatically disable Vintageous to avoid keybindings incompatibilities;
+  // note it is Vintageous setting, if it does not work you should report into
+  // appropriate repository https://github.com/guillermooo/Vintageous/issues
+  "__vi_external_disable": true,
+
+  // The rest of these settings are normal sublime settings to
+  // make FileBrowser views look more like a file browser than an editor
+  // This plugin does not change font and font size, but it's
+  // highly recommended to customize them in your user files.
+  "color_scheme": "Packages/Outline/outline.hidden-tmTheme",
+  "line_numbers": false,
+  "word_wrap": false,
+  "spell_check": false,
+  "scroll_past_end": false,
+  "draw_indent_guides": false,
+  "fold_buttons": false,
+  "drag_text": false,
+  "highlight_line": true,
+  "margin": 0,
+  "tab_size": 3,
+  "rulers": [],
+  "caret_extra_width": 0 // extra caret width causes partially hidden chars
+  // "font_face": "comic sans",
+  // "font_size": 13,
+}

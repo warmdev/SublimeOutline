@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>outline</string>
+    <key>scopeName</key>
+    <string>text.outline</string>
+    <key>uuid</key>
+    <string>ed69e186-9ee2-11e5-8994-feff819cdc9f</string>
+    <key>fileTypes</key>
+    <array>
+        <string>outline</string>
+    </array>
+    <key>patterns</key>
+    <array>
+
+      <dict>
+          <key>match</key>
+          <string>^(\s*)([▸▾] )([^\\/]*)(\\|/)?(.*)?$</string>
+          <key>name</key>
+          <string>outline.item.directory</string>
+          <key>captures</key>
+          <dict>
+              <key>1</key>
+              <dict>
+                  <key>name</key>
+                  <string>indent</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.directory.symbol.outline</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                  <key>name</key>
+                  <string>string.name.directory.outline</string>
+              </dict>
+              <key>4</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.directory.slash.outline</string>
+              </dict>
+              <key>5</key>
+                  <dict>
+                      <key>name</key>
+                      <string>string.error.outline</string>
+                  </dict>
+          </dict>
+      </dict>
+
+      <dict>
+          <key>match</key>
+          <string>^(\s*)(≡ )(\S.*?(\.[^\.\n]+)?)$</string>
+          <key>name</key>
+          <string>outline.item.file</string>
+          <key>captures</key>
+          <dict>
+              <key>1</key>
+              <dict>
+                  <key>name</key>
+                  <string>indent</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.file.symbol.outline</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                  <key>name</key>
+                  <string>string.name.file.outline</string>
+              </dict>
+              <key>4</key>
+              <dict>
+                  <key>name</key>
+                  <string>string.name.file.extension.outline</string>
+              </dict>
+          </dict>
+      </dict>
+
+      <dict>
+          <key>match</key>
+          <string>^⠤(\s*\[.+\]){0,1}$</string>
+          <key>name</key>
+          <string>outline.item.parent_dir</string>
+          <key>captures</key>
+          <dict>
+              <key>1</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.rename_mode.outline</string>
+              </dict>
+          </dict>
+      </dict>
+
+      <dict>
+          <key>begin</key>
+          <string>(\S(.+)?$)</string>
+          <key>end</key>
+          <string>^(—+)(\[RENAME MODE\]){0,1}(—*)\n</string>
+          <key>name</key>
+          <string>header.outline</string>
+          <key>endCaptures</key>
+          <dict>
+              <key>1</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.separator.outline</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.rename_mode.outline</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                  <key>name</key>
+                  <string>punctuation.definition.separator.outline</string>
+              </dict>
+          </dict>
+      </dict>
+
+    </array>
+</dict>
+</plist>
