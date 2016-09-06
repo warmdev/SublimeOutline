@@ -6,6 +6,19 @@ Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this pack
 
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
+### Installation
+
+#### Install via Package Control
+
+This package has been submitted to [Package Control](https://packagecontrol.io/). Pending approval.
+
+#### Manual installation
+
+1. Clone or download this repository to your hard drive using the green `Clone or download` button
+2. Rename the cloned or extracted folder to `Outline`. Make sure `outline.py` is at the root of the `Outline` folder.
+3. Move the `Outline` folder to your Sublime Text's `Packages` folder. To find the `Packages` folder, click menu `Preferences` > `Browse Packages`.
+4. Restart Sublime Text, and press `Ctrl + Shift + P` to select your preferred layout (`Browse Mode`)
+
 ### Default layout
 
 The outline tab can be set as a sidebar on the left or right. Press `Ctrl + Shift + P` and select either `Browse Mode: Outline (Left)` or `Browse Mode: Outline (Right)` to set your preferred layout.
