@@ -10,7 +10,7 @@ Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this pack
 
 #### Install via Package Control
 
-This package has been submitted to [Package Control](https://packagecontrol.io/). Pending approval.
+This package is available on Package Control. Search for `Outline`.
 
 #### Manual installation
 
