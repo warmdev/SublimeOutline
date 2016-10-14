@@ -31,11 +31,11 @@ If you also use [FileBrowser](https://github.com/aziz/SublimeFileBrowser), you c
 
 To use `FileBrowser` and `Outline` together, please close the `FileBrowser` sidebar first and then use the correponding `Browse Mode` command to set the layout, otherwise the `Outline` view may not work as intended.
 
-### Outline content and identation
+### Outline content and indentation
 
 Outline is updated when you save a file or switch between files.
 
-Content and identation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
+Content and indentation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
 
 ### Known issue
 
