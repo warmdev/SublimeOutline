@@ -1,0 +1,8 @@
+0.1.1
+
+* Added package settings menu items (Preferences > Package Settings > Outline)
+* Added dark theme. To enable the dark theme, add the following line to your package user settings file. Open the user settings file by "Preferences > Package Settings > Outline > Settings" (Sublime Text version 3124 or later), or "Settings - User"
+
+```json
+"color_scheme": "Packages/Outline/outline-Dark.hidden-tmTheme"
+``` 

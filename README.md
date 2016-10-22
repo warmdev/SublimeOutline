@@ -10,7 +10,7 @@ Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this pack
 
 #### Install via Package Control
 
-This package is available on Package Control. Search for `Outline`.
+This package has been submitted to [Package Control](https://packagecontrol.io/). Pending approval.
 
 #### Manual installation
 
@@ -31,11 +31,11 @@ If you also use [FileBrowser](https://github.com/aziz/SublimeFileBrowser), you c
 
 To use `FileBrowser` and `Outline` together, please close the `FileBrowser` sidebar first and then use the correponding `Browse Mode` command to set the layout, otherwise the `Outline` view may not work as intended.
 
-### Outline content and indentation
+### Outline content and identation
 
 Outline is updated when you save a file or switch between files.
 
-Content and indentation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
+Content and identation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
 
 ### Known issue
 

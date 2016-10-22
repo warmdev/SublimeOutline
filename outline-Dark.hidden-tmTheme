@@ -10,7 +10,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#d9dee5</string>
+				<string>#272822</string>
 				<key>foreground</key>
 				<string>#222222</string>
 				<key>caret</key>
@@ -18,7 +18,7 @@
 				<key>lineHighlight</key>
 				<string>#367cc055</string>
 				<key>gutter</key>
-				<string>#d9dee5</string>
+				<string>#272822</string>
 				<key>invisibles</key>
 				<string>#88222233</string>
 				<key>selection</key>
@@ -28,7 +28,7 @@
 				<key>inactiveSelection</key>
 				<string>#22222219</string>
 				<key>shadow</key>
-				<string>#d9dee5</string>
+				<string>#272822</string>
 				<key>shadowWidth</key>
 				<string>16</string>
 
@@ -126,7 +126,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#707e8b</string>
+				<string>#f8f8f2</string>
 			</dict>
 		</dict>
 
