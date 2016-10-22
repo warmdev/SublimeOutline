@@ -2,7 +2,7 @@
 
 ### Overview
 
-Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this package shows the outline/structure of your code/document in a sidebar-style tab.
+Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this package shows the outline of your document or class/function name list of your code in a sidebar-style tab.
 
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
