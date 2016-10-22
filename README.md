@@ -10,7 +10,7 @@ Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this pack
 
 #### Install via Package Control
 
-This package has been submitted to [Package Control](https://packagecontrol.io/). Pending approval.
+This package is available on [Package Control](https://packagecontrol.io/). Search for `Outline`.
 
 #### Manual installation
 
@@ -41,11 +41,11 @@ To use `FileBrowser` and `Outline` together, please close the `FileBrowser` side
 
 Remove `-Dark` or remove the entire line to return to the bright theme. To customize your own color theme, see [this issue](https://github.com/warmdev/SublimeOutline/issues/1).
 
-### Outline content and identation
+### Outline content and indentation
 
 Outline is updated when you save a file or switch between files.
 
-Content and identation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
+Content and indentation in the `Outline` tab is controlled by the `Symbol List.tmPreferences` file (file name may differ) corresponding to the syntax of your file.
 
 ### Known issue
 
