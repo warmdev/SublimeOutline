@@ -44,6 +44,10 @@
   // false: a new view is created.
   "outline_reuse_view": true,
 
+  // true: Enable alphabetical sort in output.
+  // false: default because of loosing parent dependences.
+  "outline_alphabetical": false,
+
   // How should be positioned the Browse Mode view opened when jumping
   // "left": the default, open the view on the left
   // "right": open the view on the right

@@ -35,7 +35,7 @@ class OutlineEventHandler(EventListener):
 		sym_view = view
 		window = view.window()
 		sym_group, i = window.get_view_index(sym_view)
-			
+
 		if len(sym_view.sel()) == 0:
 			return
 
@@ -70,15 +70,18 @@ class OutlineEventHandler(EventListener):
 				return
 			else:
 				sym_view.settings().set('current_file', view.file_name())
-			
-		symlist = view.get_symbols()
+
+		if sym_view.settings().get('outline_alphabetical'):
+			symlist = sorted(view.get_symbols(), key=lambda tup: tup[1].lstrip())
+		else:
+			symlist = view.get_symbols()
 
 		refresh_sym_view(sym_view, symlist, view.file_name())
 
 	def on_pre_save(self, view):
 		if u'𝌆' in view.name():
 			return
-		# this is not absolutely necessary, and prevents views that do not have a file reference from displaying 
+		# this is not absolutely necessary, and prevents views that do not have a file reference from displaying
 		# the symbol list
 		# but it solves a console error if the console is activiated, as console is also a view....
 		if view.file_name() == None:
@@ -93,7 +96,10 @@ class OutlineEventHandler(EventListener):
 			# Note here is the only place that differs from on_activate_view
 			if sym_view.settings().get('current_file') != view.file_name():
 				sym_view.settings().set('current_file', view.file_name())
-			
-		symlist = view.get_symbols()
+
+		if sym_view.settings().get('outline_alphabetical'):
+			symlist = sorted(view.get_symbols(), key=lambda tup: tup[1].lstrip())
+		else:
+			symlist = view.get_symbols()
 
 		refresh_sym_view(sym_view, symlist, view.file_name())
