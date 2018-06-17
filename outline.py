@@ -19,11 +19,24 @@ class OutlineCloseSidebarCommand(WindowCommand):
 class OutlineRefreshCommand(TextCommand):
 	def run(self, edit, symlist=None, symkeys=None, path=None, to_expand=None, toggle=None):
 		self.view.erase(edit, Region(0, self.view.size()))
+		if self.view.settings().get('outline_alphabetical'):
+			symlist, symkeys = (list(t) for t in zip(*sorted(zip(symlist, symkeys))))
 		self.view.insert(edit, 0, "\n".join(symlist))
 		self.view.settings().set('symlist', symlist)
 		self.view.settings().set('symkeys', symkeys)
 		self.view.settings().set('current_file', path)
 		self.view.sel().clear()
+
+class OutlineToggleSortCommand(TextCommand):
+	def run(self, edit):
+		sym_view = None
+		for v in self.view.window().views():
+			if u'𝌆' in v.name():
+				v.settings().set('outline_alphabetical', not v.settings().get('outline_alphabetical'))
+				sym_view = v
+
+		symlist = self.view.get_symbols()
+		refresh_sym_view(sym_view, symlist, self.view.file_name())
 
 class OutlineEventHandler(EventListener):
 	def on_selection_modified(self, view):
@@ -95,5 +108,4 @@ class OutlineEventHandler(EventListener):
 				sym_view.settings().set('current_file', view.file_name())
 			
 		symlist = view.get_symbols()
-
 		refresh_sym_view(sym_view, symlist, view.file_name())

@@ -59,5 +59,11 @@
     "command": "outline_close_sidebar",
     "args": {
     }
+  },
+  {
+    "caption": "Outline: Toggle Sort",
+    "command": "outline_toggle_sort",
+    "args": {
+    }
   }
 ]
