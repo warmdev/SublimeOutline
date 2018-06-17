@@ -19,6 +19,8 @@ class OutlineCloseSidebarCommand(WindowCommand):
 class OutlineRefreshCommand(TextCommand):
 	def run(self, edit, symlist=None, symkeys=None, path=None, to_expand=None, toggle=None):
 		self.view.erase(edit, Region(0, self.view.size()))
+		if self.view.settings().get('outline_alphabetical'):
+			symlist, symkeys = (list(t) for t in zip(*sorted(zip(symlist, symkeys))))
 		self.view.insert(edit, 0, "\n".join(symlist))
 		self.view.settings().set('symlist', symlist)
 		self.view.settings().set('symkeys', symkeys)
