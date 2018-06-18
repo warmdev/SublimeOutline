@@ -27,6 +27,17 @@ class OutlineRefreshCommand(TextCommand):
 		self.view.settings().set('current_file', path)
 		self.view.sel().clear()
 
+class OutlineToggleSortCommand(TextCommand):
+	def run(self, edit):
+		sym_view = None
+		for v in self.view.window().views():
+			if u'𝌆' in v.name():
+				v.settings().set('outline_alphabetical', not v.settings().get('outline_alphabetical'))
+				sym_view = v
+
+		symlist = self.view.get_symbols()
+		refresh_sym_view(sym_view, symlist, self.view.file_name())
+
 class OutlineEventHandler(EventListener):
 	def on_selection_modified(self, view):
 		if 'outline.hidden-tmLanguage' not in view.settings().get('syntax'):
@@ -97,5 +108,4 @@ class OutlineEventHandler(EventListener):
 				sym_view.settings().set('current_file', view.file_name())
 			
 		symlist = view.get_symbols()
-
 		refresh_sym_view(sym_view, symlist, view.file_name())

@@ -1,0 +1,10 @@
+0.1.2
+
+* Added ability to sort outline alphabetically by setting or by command
+	- By setting: add the following line in settings and change the value to `true`:
+
+```json
+"outline_alphabetical": true,
+```
+
+	- By command: press `Ctrl + Shift + P` and select `Outline: Toggle Sort`
