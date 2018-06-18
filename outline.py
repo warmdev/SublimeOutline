@@ -19,7 +19,7 @@ class OutlineCloseSidebarCommand(WindowCommand):
 class OutlineRefreshCommand(TextCommand):
 	def run(self, edit, symlist=None, symkeys=None, path=None, to_expand=None, toggle=None):
 		self.view.erase(edit, Region(0, self.view.size()))
-		if self.view.settings().get('outline_alphabetical'):
+		if symlist and self.view.settings().get('outline_alphabetical'):
 			symlist, symkeys = (list(t) for t in zip(*sorted(zip(symlist, symkeys))))
 		self.view.insert(edit, 0, "\n".join(symlist))
 		self.view.settings().set('symlist', symlist)
@@ -59,7 +59,10 @@ class OutlineEventHandler(EventListener):
 			if group != sym_group and group != fb_group:
 				active_view = window.active_view_in_group(group)
 		if active_view != None:
-			region_position = sym_view.settings().get('symkeys')[row]
+			symkeys = sym_view.settings().get('symkeys')
+			if not symkeys:
+				return
+			region_position = symkeys[row]
 			r = Region(region_position[0], region_position[1])
 			active_view.show_at_center(r)
 			active_view.sel().clear()
