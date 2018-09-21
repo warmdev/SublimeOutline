@@ -48,7 +48,7 @@ class OutlineEventHandler(EventListener):
 		sym_view = view
 		window = view.window()
 		sym_group, i = window.get_view_index(sym_view)
-			
+
 		if len(sym_view.sel()) == 0:
 			return
 
@@ -86,7 +86,7 @@ class OutlineEventHandler(EventListener):
 				return
 			else:
 				sym_view.settings().set('current_file', view.file_name())
-			
+
 		symlist = view.get_symbols()
 
 		refresh_sym_view(sym_view, symlist, view.file_name())
@@ -94,7 +94,7 @@ class OutlineEventHandler(EventListener):
 	def on_pre_save(self, view):
 		if u'𝌆' in view.name():
 			return
-		# this is not absolutely necessary, and prevents views that do not have a file reference from displaying 
+		# this is not absolutely necessary, and prevents views that do not have a file reference from displaying
 		# the symbol list
 		# but it solves a console error if the console is activiated, as console is also a view....
 		if view.file_name() == None:
@@ -109,6 +109,28 @@ class OutlineEventHandler(EventListener):
 			# Note here is the only place that differs from on_activate_view
 			if sym_view.settings().get('current_file') != view.file_name():
 				sym_view.settings().set('current_file', view.file_name())
-			
+
+		symlist = view.get_symbols()
+		refresh_sym_view(sym_view, symlist, view.file_name())
+
+	def on_modified(self, view):
+		if u'𝌆' in view.name():
+			return
+		# this is not absolutely necessary, and prevents views that do not have a file reference from displaying
+		# the symbol list
+		# but it solves a console error if the console is activiated, as console is also a view....
+		if view.file_name() == None:
+			return
+
+		if not get_sidebar_status(view):
+			return
+
+		sym_view, sym_group, fb_view, fb_group = get_sidebar_views_groups(view)
+
+		if sym_view != None:
+			# Note here is the only place that differs from on_activate_view
+			if sym_view.settings().get('current_file') != view.file_name():
+				sym_view.settings().set('current_file', view.file_name())
+
 		symlist = view.get_symbols()
 		refresh_sym_view(sym_view, symlist, view.file_name())
