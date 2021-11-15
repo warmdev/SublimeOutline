@@ -157,3 +157,19 @@ def get_sidebar_status(view):
             sidebar_on = True
 
     return sidebar_on
+
+# given a sorted array, returns the location of x if inserted into the array
+def binary_search(array, x):
+    low = 0
+    high = len(array) - 1
+    mid = 0
+
+    while low < high:
+        # middle location
+        mid = (high + low) // 2
+        if array[mid] <= x:
+            low = mid + 1
+        else:
+            high = mid
+
+    return low

@@ -48,6 +48,10 @@
   // false: default because of losing parent dependences.
   "outline_alphabetical": false,
 
+  // true: default, outline is in sync with current file position
+  // false: no syncing, may be useful if use alphabetical sort
+  "outline_sync": true,
+
   // How should be positioned the Browse Mode view opened when jumping
   // "left": the default, open the view on the left
   // "right": open the view on the right

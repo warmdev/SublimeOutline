@@ -1,7 +1,7 @@
 import sublime
 from sublime import Region
 from sublime_plugin import WindowCommand, TextCommand, EventListener
-from .show import show, refresh_sym_view, get_sidebar_views_groups, get_sidebar_status
+from .show import show, refresh_sym_view, get_sidebar_views_groups, get_sidebar_status, binary_search
 
 class OutlineCommand(WindowCommand):
 	def run(self, immediate=False, single_pane=False, project=False, other_group=False, layout=0):
@@ -112,3 +112,21 @@ class OutlineEventHandler(EventListener):
 			
 		symlist = view.get_symbols()
 		refresh_sym_view(sym_view, symlist, view.file_name())
+
+		# sync the outline view with current file location
+		if view.window() is None or not sym_view.settings().get('outline_sync'):
+			return
+		# get the current cursor location
+		point = view.sel()[0].begin()
+		# get the current symbol and its line in outline
+		range_lows = [range.a for range, symbol in symlist]
+		range_sorted = [0] + range_lows[1:len(range_lows)] + [view.size()]
+		sym_line = binary_search(range_sorted, point) - 1
+
+		if (sym_view is not None):
+			sym_point_start = sym_view.text_point(sym_line, 0)
+			# center symview at the point
+			sym_view.show_at_center(sym_point_start)
+			sym_view.sel().clear()
+			sym_view.sel().add(sym_view.line(sym_point_start))
+			view.window().focus_view(view)
