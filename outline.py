@@ -9,12 +9,15 @@ class OutlineCommand(WindowCommand):
 
 class OutlineCloseSidebarCommand(WindowCommand):
 	def run(self):
+		active_view = self.window.active_view()
+
 		for v in self.window.views():
 			if u'𝌆' in v.name():
 				self.window.focus_view(v)
 				self.window.run_command('close_file')
 
 		self.window.set_layout({"cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]]})
+		self.window.focus_view(active_view)
 
 class OutlineRefreshCommand(TextCommand):
 	def run(self, edit, symlist=None, symkeys=None, path=None, to_expand=None, toggle=None):
