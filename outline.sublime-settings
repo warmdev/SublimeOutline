@@ -52,6 +52,12 @@
   // false: no syncing, may be useful if use alphabetical sort
   "outline_sync": true,
 
+  // when clicking on a symbol in the outline pane, how to highlight in the main view
+  // "cursor": put the cursor at the end of the symbol line
+  // "symbol": highlight the symbol in the main view
+  // "block": highlight the entire block between the current symbol and next symbol
+  "outline_main_view_highlight_mode": "symbol",
+
   // How should be positioned the Browse Mode view opened when jumping
   // "left": the default, open the view on the left
   // "right": open the view on the right

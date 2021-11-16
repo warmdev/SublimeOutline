@@ -57,12 +57,25 @@ class OutlineEventHandler(EventListener):
 
 		(row, col) = sym_view.rowcol(sym_view.sel()[0].begin())
 
-		active_view =None
+		active_view = None
 		for group in range(window.num_groups()):
 			if group != sym_group and group != fb_group:
 				active_view = window.active_view_in_group(group)
 		if active_view != None:
-			symkeys = sym_view.settings().get('symkeys')
+			symkeys = None
+			# get the symbol list
+			symlist = active_view.get_symbols()
+			print(symlist)
+			# depending on setting, set different regions
+			if sym_view.settings().get('outline_main_view_highlight_mode') == 'cursor':
+				symbol_line_ends = [active_view.line(range.a).end() for range, symbol in symlist]
+				symkeys = list(zip(symbol_line_ends, symbol_line_ends))
+			if sym_view.settings().get('outline_main_view_highlight_mode') == 'symbol':
+				symkeys = sym_view.settings().get('symkeys')
+			if sym_view.settings().get('outline_main_view_highlight_mode') == 'block':
+				symbol_block_begins = [active_view.line(range.a).begin() for range, symbol in symlist]
+				symbol_blocks_ends = [x - 1 for x in symbol_block_begins[1:len(symbol_block_begins)]] + [active_view.size()]
+				symkeys = list(zip(symbol_block_begins, symbol_blocks_ends))
 			if not symkeys:
 				return
 			region_position = symkeys[row]
@@ -122,7 +135,7 @@ class OutlineEventHandler(EventListener):
 		# get the current cursor location
 		point = view.sel()[0].begin()
 		# get the current symbol and its line in outline
-		range_lows = [range.a for range, symbol in symlist]
+		range_lows = [view.line(range.a).begin() for range, symbol in symlist]
 		range_sorted = [0] + range_lows[1:len(range_lows)] + [view.size()]
 		sym_line = binary_search(range_sorted, point) - 1
 
