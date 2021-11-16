@@ -1,0 +1,9 @@
+0.1.4
+
+* Fixed issue where after closing outline sidebar, focus is on an empty tab
+
+* When clicking on a symbol item in the outline pane, highlight in the main view depends on the setting `outline_main_view_highlight_mode`:
+
+* `cursor`: no highlight, put cursor at the end of the symbol line
+* `symbol`: highlight the current symbol (same as previous implementation)
+* `block`: highlight the entire symbol block (i.e. between current and next symbol)
