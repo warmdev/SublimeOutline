@@ -42,6 +42,7 @@ To use `FileBrowser` and `Outline` together, please close the `FileBrowser` side
 `Outline` has two built-in color themes: Bright (default theme) and Dark. To switch to the Dark theme, add the following to your user settings file. Open the user settings file by "Preferences > Package Settings > Outline > Settings" (Sublime Text version 3124 or later), or "Settings - User":
 
 ```json
+"outline_inherit_color_scheme": false
 "color_scheme": "Packages/Outline/outline-Dark.hidden-tmTheme"
 ```
 
