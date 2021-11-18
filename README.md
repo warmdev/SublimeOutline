@@ -2,7 +2,7 @@
 
 ### Overview
 
-Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this package shows the outline of your document or class/function name list of your code in a sidebar-style tab.
+Inspired by [FileBrowser](https://github.com/aziz/SublimeFileBrowser), this package shows the outline of your file, class/function name list of your code, or table of content/toc of your markdown/LaTeX document in a sidebar-style tab.
 
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
@@ -32,6 +32,12 @@ If you also use [FileBrowser](https://github.com/aziz/SublimeFileBrowser), you c
 To use `FileBrowser` and `Outline` together, please close the `FileBrowser` sidebar first and then use the correponding `Browse Mode` command to set the layout, otherwise the `Outline` view may not work as intended.
 
 ### Color theme
+
+`Outline` can be configured to use the current editor color scheme. To do so, change the setting below:
+
+```json
+"outline_inherit_color_scheme": true
+```
 
 `Outline` has two built-in color themes: Bright (default theme) and Dark. To switch to the Dark theme, add the following to your user settings file. Open the user settings file by "Preferences > Package Settings > Outline > Settings" (Sublime Text version 3124 or later), or "Settings - User":
 
