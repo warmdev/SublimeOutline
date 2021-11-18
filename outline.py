@@ -65,7 +65,6 @@ class OutlineEventHandler(EventListener):
 			symkeys = None
 			# get the symbol list
 			symlist = active_view.get_symbols()
-			print(symlist)
 			# depending on setting, set different regions
 			if sym_view.settings().get('outline_main_view_highlight_mode') == 'cursor':
 				symbol_line_ends = [active_view.line(range.a).end() for range, symbol in symlist]

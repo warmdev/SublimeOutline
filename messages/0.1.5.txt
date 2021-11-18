@@ -1,0 +1,3 @@
+0.1.5
+
+* Added option to use editor color scheme for outline. Change setting `outline_inherit_color_scheme` to `true`. Close and reopen outline tab for the change to take effect. If you change the editor color scheme, close and reopen outline tab for the new color scheme to take effect. 

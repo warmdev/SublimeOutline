@@ -58,6 +58,10 @@
   // "block": highlight the entire block between the current symbol and next symbol
   "outline_main_view_highlight_mode": "symbol",
 
+  // true: outline view will use the same color scheme as current file
+  // false: outline will use its own color schemes (default or dark)
+  "outline_inherit_color_scheme": true,
+
   // How should be positioned the Browse Mode view opened when jumping
   // "left": the default, open the view on the left
   // "right": open the view on the right

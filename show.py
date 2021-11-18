@@ -38,6 +38,7 @@ def set_active_group(window, view, other_group):
 
 def set_view(view_id, window, ignore_existing, single_pane):
     view = None
+    active_view = None
     if view_id:
         # The Goto command was used so the view is already known and its contents should be
         # replaced with the new path.
@@ -49,10 +50,15 @@ def set_view(view_id, window, ignore_existing, single_pane):
         view = first(window.views(), any_path if single_pane else same_path)
 
     if not view:
+        active_view = window.active_view()
         view = window.new_file()
-        view.settings().add_on_change('color_scheme', lambda: set_proper_scheme(view))
         view.set_syntax_file('Packages/Outline/outline.hidden-tmLanguage')
         view.set_scratch(True)
+        if view.settings().get('outline_inherit_color_scheme'):
+            view.settings().set('color_scheme', active_view.settings().get('color_scheme'))
+        else:
+            view.settings().add_on_change('color_scheme', lambda: set_proper_scheme(view))
+        
         reset_sels = True
     else:
         reset_sels = path != view.settings().get('outline_path', '')
@@ -121,12 +127,8 @@ def show(window, view_id=None, ignore_existing=False, single_pane=False, other_g
     refresh_sym_view(view, symlist, file_path)
 
 def refresh_sym_view(sym_view, symlist, path):
-    l = []
-    k = []
-    for symbol in symlist:
-        rng, sym = symbol
-        l.append(sym)
-        k.append((rng.a, rng.b))
+    l = [symbol for range, symbol in symlist]
+    k = [(range.a, range.b) for range, symbol in symlist]
     if sym_view != None:
         sym_view.settings().erase('symlist')
         sym_view.settings().erase('symkeys')
