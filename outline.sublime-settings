@@ -77,7 +77,7 @@
   // float  0.1-0.9   put 1 is a window width, so e.g. 0.5 is half of window
   // int    e.g. 99   pixels, if value will be more than current window width
   //                  then value will be treated as 0.9
-  "outline_width": 0.3,
+  "outline_width": 0.2,
 
   // Automatically disable Vintageous to avoid keybindings incompatibilities;
   // note it is Vintageous setting, if it does not work you should report into

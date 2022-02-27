@@ -103,16 +103,17 @@ def show(window, view_id=None, ignore_existing=False, single_pane=False, other_g
     if layout >= 2:
         window.run_command('dired', {'immediate': True, 'other_group': 'right', 'single_pane': True, 'project': True})
 
+    width = calc_width(view)
     if layout == 0:
-        window.set_layout({"cols": [0.0, 0.2, 0.8, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 0, 3, 2], [0, 0, 2, 2]]})
+        window.set_layout({"cols": [0.0, width, 1-width, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 0, 3, 2], [0, 0, 2, 2]]})
     elif layout == 1:
-        window.set_layout({"cols": [0.0, 0.2, 0.8, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 2], [1, 0, 3, 2]]})
+        window.set_layout({"cols": [0.0, width, 1-width, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 2], [1, 0, 3, 2]]})
     elif layout == 2:
-        window.set_layout({"cols": [0.0, 0.2, 0.8, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 0, 3, 2], [1, 0, 2, 2], [0, 0, 1, 2]]})
+        window.set_layout({"cols": [0.0, width, 1-width, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 0, 3, 2], [1, 0, 2, 2], [0, 0, 1, 2]]})
     elif layout == 3:
-        window.set_layout({"cols": [0.0, 0.2, 0.8, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 1, 1, 2], [1, 0, 3, 2], [0, 0, 1, 1]]})
+        window.set_layout({"cols": [0.0, width, 1-width, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 1, 1, 2], [1, 0, 3, 2], [0, 0, 1, 1]]})
     elif layout == 4:
-        window.set_layout({"cols": [0.0, 0.2, 0.8, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 1, 3, 2], [0, 0, 2, 2], [2, 0, 3, 1]]})
+        window.set_layout({"cols": [0.0, width, 1-width, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[2, 1, 3, 2], [0, 0, 2, 2], [2, 0, 3, 1]]})
 
     window.set_view_index(view, 0, 0)
 
